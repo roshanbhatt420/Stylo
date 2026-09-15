@@ -1,0 +1,12 @@
+/model
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/venv/
+backend/.env
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+.DS_Store

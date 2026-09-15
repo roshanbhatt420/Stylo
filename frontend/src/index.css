@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FBF9F5;
+    color: #1F1C18;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Creamy Minimalist Surfaces */
+.surface-card {
+  background-color: #FFFFFF;
+  border: 1px solid #EAE5DB;
+  box-shadow: 0 1px 3px 0 rgba(31, 28, 24, 0.03), 0 2px 8px 0 rgba(31, 28, 24, 0.02);
+}
+
+.surface-inset {
+  background-color: #F7F4EC;
+  border: 1px solid #E4DDCF;
+}
+
+/* Refined Minimalist Range Slider */
+input[type=range] {
+  accent-color: #2E2B25;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background-color: #EAE5DB;
+  height: 6px;
+  border-radius: 9999px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background-color: #1F1C18;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
