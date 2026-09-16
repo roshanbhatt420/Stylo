@@ -56,20 +56,7 @@ Style Image (s)   ---> [ Fixed VGG-19 Encoder ] ---> f(s) ---+          ^
                                                         (Optional CORAL Color Match)
 ```
 
-### Mathematical Formulation
 
-1. **AdaIN Layer**: Aligns the channel-wise mean and variance of content features $x$ to match style features $y$:
-   $$\text{AdaIN}(x, y) = \sigma(y) \left( \frac{x - \mu(x)}{\sigma(x)} \right) + \mu(y)$$
-
-2. **Stylization Tradeoff ($\alpha$)**:
-   $$T = \alpha \cdot \text{AdaIN}(f(c), f(s)) + (1 - \alpha) f(c)$$
-
-3. **Multi-Style Interpolation**:
-   $$T = \alpha \cdot \sum_{i=1}^{N} w_i \, \text{AdaIN}(f(c), f(s_i)) + (1 - \alpha) f(c) \quad \text{where} \quad \sum_{i=1}^N w_i = 1$$
-
-4. **CORAL (Correlation Alignment)**:
-   Transfers the second-order color statistics (covariance) of the content image to the style image prior to encoding:
-   $$\hat{s} = A_c A_s^{-1} (s - \mu_s) + \mu_c$$
 
 ---
 
